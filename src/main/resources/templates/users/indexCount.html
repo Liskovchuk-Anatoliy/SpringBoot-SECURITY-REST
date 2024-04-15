@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+</head>
+<body>
+<h1>User Details</h1>
+<label>Name user:</label>
+<p th:text="${user.username}">VALUE</p>
+<br/>
+<br/>
+<label>Id:</label>
+<p th:text="${user.id}">VALUE</p>
+<br/>
+<br/>
+<label>Password user:</label>
+<p th:text="${user.password}">VALUE</p>
+<br/>
+<br/>
+<label>User Role:</label>
+<p th:text="${user.roles}">VALUE</p>
+<br/>
+<form action="/users/{id}" method="post">
+    <input type="hidden" name="_method" value="DELETE"/>
+    <input type="submit" value="Delete"/>
+</form>
+<br/>
+<form action="/users/index" method="get">
+    <button type="submit">Back</button>
+</form>
+</body>
+</html>
