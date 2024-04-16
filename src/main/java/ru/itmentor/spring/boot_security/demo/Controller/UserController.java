@@ -12,6 +12,7 @@ import ru.itmentor.spring.boot_security.demo.model.User;
 @RequestMapping("/users")
 public class UserController {
 
+
     private final UserDao userDAO;
 
     public UserController(UserDao userDao){
@@ -65,4 +66,15 @@ public class UserController {
         userDAO.delete(id);
         return "redirect:/users/index";
     }
+
+    //Методы для Rest
+//    @ResponseBody
+//    @GetMapping("/sayHello")
+//    @PreAuthorize("hasRole('ADMIN')")
+//    public String sayHello (){
+//        return "Hello world!";
+//    }
+
+
+
 }
